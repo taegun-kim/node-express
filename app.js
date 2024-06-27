@@ -19,7 +19,7 @@ const sequelize = new Sequelize({
     storage: './database.sqlite'
 });
 const corsOptions = {
-    origin: 'https://taegun-kim.github.io/HotelReservation',
+    origin: 'https://taegun-kim.github.io',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization']
 };
