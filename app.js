@@ -19,6 +19,10 @@ const sequelize = new Sequelize({
     storage: './database.sqlite'
 });
 
+nunjucks.configure('views', {
+    express: app,
+    watch: true,
+});
 // Express 앱 설정
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'njk');
