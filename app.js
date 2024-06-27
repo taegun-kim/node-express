@@ -20,7 +20,7 @@ const sequelize = new Sequelize({
 });
 
 const corsOptions = {
-  origin: 'https://port-0-node-express-lxxo8336e8ae8d43.sel5.cloudtype.app', // 프론트엔드 주소
+  origin: 'https://peaceful-klepon-eaac7b.netlify.app/', // 프론트엔드 주소
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
