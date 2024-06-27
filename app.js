@@ -20,8 +20,9 @@ const sequelize = new Sequelize({
 });
 
 const corsOptions = {
-  origin: 'https://peaceful-klepon-eaac7b.netlify.app/', // 프론트엔드 주소
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+    origin: 'https://taegun-kim.github.io/HotelReservation/', // 당신의 프론트엔드 출처로 업데이트
+    methods: ['GET', 'POST'], // 필요한 HTTP 메서드 추가
+    allowedHeaders: ['Content-Type', 'Authorization'] // 프론트엔드에서 보내는 헤더 추가
 };
 
 // Express 앱 설정
