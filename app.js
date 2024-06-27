@@ -19,7 +19,7 @@ const sequelize = new Sequelize({
     storage: './database.sqlite'
 });
 const corsOptions = {
-    origin: 'https://peaceful-klepon-eaac7b.netlify.app',
+    origin: 'https://taegun-kim.github.io/HotelReservation',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization']
 };
