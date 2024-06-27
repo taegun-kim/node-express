@@ -19,12 +19,6 @@ const sequelize = new Sequelize({
     storage: './database.sqlite'
 });
 
-const corsOptions = {
-    origin: 'https://taegun-kim.github.io/HotelReservation/', // 당신의 프론트엔드 출처로 업데이트
-    methods: ['GET', 'POST'], // 필요한 HTTP 메서드 추가
-    allowedHeaders: ['Content-Type', 'Authorization'] // 프론트엔드에서 보내는 헤더 추가
-};
-
 // Express 앱 설정
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'njk');
@@ -38,8 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 // 예약 정보를 담을 빈 배열 또는 초기화
 let reservations = [];
