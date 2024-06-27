@@ -22,10 +22,6 @@ const sequelize = new Sequelize({
 // Express 앱 설정
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'njk');
-nunjucks.configure('views', { 
-  express: app,
-  watch: true,
-});
 
 app.use(logger('dev'));
 app.use(express.json());
