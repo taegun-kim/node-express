@@ -19,6 +19,11 @@ const sequelize = new Sequelize({
     storage: './database.sqlite'
 });
 
+const corsOptions = {
+  origin: 'https://peaceful-klepon-eaac7b.netlify.app', // 프론트엔드 주소
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
 // Express 앱 설정
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'njk');
@@ -32,7 +37,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors());
+
+app.use(cors(corsOptions));
 
 // 예약 정보를 담을 빈 배열 또는 초기화
 let reservations = [];
